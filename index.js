@@ -5,8 +5,8 @@ const app = express();
 
 const port = process.env.PORT || 3001;
 
-const message = 'Olá Marilene';
+const message = process.env.MESSAGE || 'Está vivo!!!';
 
-app.get('/', (_req, res) => res.status(200).send(`${message}, a noite tainha`));
+app.get('/', (_req, res) => res.status(200).send(`${message}`));
 
 app.listen(port);
